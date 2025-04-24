@@ -1,0 +1,637 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'poppins', sans-serif;
+    font-weight: 200;
+    line-height: 1.6;
+    padding: 0;
+    /* min-height: 100vh; */
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;  
+    background-color: #001F5F;
+    color: #fff; 
+    padding: 1rem 2rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #f8f9fa;
+    cursor: context-menu;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #FFA500;
+    text-decoration: underline;
+    transform: translateY(-3px);
+}
+
+.navbar nav {
+    display: flex;
+    align-items: center;
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        flex-direction: column;
+        background-color: #001F5F;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 100%;
+        padding: 1rem 0;
+        display: none;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .navbar {
+        flex-wrap: wrap;
+    }
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+}
+
+.hamburger div {
+    width: 25px;
+    height: 3px;
+    background-color: #dd0303;
+    transition: all 0.3s ease;
+}
+
+
+/* Hero Section */
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(to right, #007BFF, #001F5F);
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+}
+.hero-content {
+    /* flex: 1 1 50%; */
+    /* text-align: left; */
+
+}
+
+.hero-content h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 3rem;
+    /* Large, bold headline */
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 1rem;
+}
+
+.hero-content p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.hero-content .btn {
+    font-family: 'Poppins', sans-serif;
+    padding: 1rem 2rem;
+    background-color: #FFA500;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    box-shadow: 0 4px 15px rgba(255, 165, 0, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hero-content .btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 20px #ffa500b3;
+}
+
+.hero-visual {
+    /* flex: 1; */
+    /* text-align: center; */
+}
+
+.hero-visual img {
+    max-width: 100%;
+    height: auto;
+    flex: 1 1 50%;
+    object-fit: cover;
+
+
+    /* Subtle shadow effect */
+}
+.about-section {
+    padding: 4rem 2rem;
+    text-align: center;
+    background-color: #fff;
+}
+
+.about-section h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.5rem;
+    color: #000000;
+    margin-bottom: 1.5rem;
+}
+
+.about-section p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    color: #3b3939;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto 2rem auto;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.about-card {
+    background-color: #f9f9f9;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.about-card h3 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.5rem;
+    color: #000000;
+    margin-bottom: 1rem;
+}
+
+.about-card p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.9rem;
+    color: #3b3939;
+    line-height: 1.6;
+}
+.testimonials-section {
+    padding: 4rem 2rem;
+    text-align: center;
+    background-color: #f9f9f9;
+}
+
+.testimonials-section h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.5rem;
+    color: #000000;
+    margin-bottom: 2rem;
+}
+
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.testimonial-card {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 2rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.testimonial-card p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    color: #3b3939;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.testimonial-card h3 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2rem;
+    color: #FFA500;
+}
+.cta-section {
+    text-align: center;
+    background-color: #22252b;
+    color: #fff;
+    padding: 4rem 2rem;
+}
+
+.cta-section h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #ffffff;
+}
+
+.cta-section p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
+
+.cta-btn {
+    font-family: 'Poppins', sans-serif;
+    background-color: #FFA500;
+    color: #fff;
+    text-decoration: none;
+    padding: 0.8rem 2rem;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    box-shadow: 0 4px 15px rgba(255, 165, 0, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cta-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 20px rgba(255, 165, 0, 0.7);
+}
+.features {
+    display: flex;
+    justify-content: space-around;
+    padding: 2rem;
+}
+
+.feature {
+    text-align: center;
+    max-width: 200px;
+}
+.footer {
+    background-color: #001F5F;
+    color: #fff;
+    padding: 1rem 2rem;
+    text-align: center;
+}
+.footer-section h2 {
+    color:#f9f9f9;
+    margin-top: 1rem;
+}
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-about h3 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.footer-about p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #ccc;
+}
+
+.footer-links h4,
+.footer-social h4 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #FFA500;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li {
+    margin-bottom: 4px;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: #ccc;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #FFA500;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.social-icons a {
+    font-size: 1.5rem;
+    color: #ccc;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #FFA500;
+    transform: scale(1.2); 
+}
+
+.footer-bottom {
+    margin-top: 2rem;
+    font-size: 0.9rem;
+    color: #bbb;
+}
+.features-section {
+    background-color: #ffff;
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+.features-section h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.5rem;
+    color: #000000;
+    margin-bottom: 1rem;
+}
+
+.features-intro {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    color: #3b3939;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.feature-card {
+    background-color: #141c22;
+    border: 1px solid #746b6b;
+    border-radius: 6px;
+    height: 350px;
+    width: 280px;
+    padding: 3rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.feature-card i {
+    font-size: 3rem;
+    color: #007BFF;
+    margin-bottom: 1rem;
+}
+
+.feature-card h3 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.5rem;
+    color: #fff;
+    margin-bottom: 1rem;
+}
+
+.feature-card p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.9rem;
+    color: #f5f2f2;
+    line-height: 1.6;
+}
+/* General section styling */
+section {
+    background-color: #f8f9fa;
+    padding: 50px 20px;
+    font-family: 'Poppins', sans-serif;
+}
+
+h2 {
+    color: #343a40;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+p.lead {
+    color: #0d1216;
+    text-align: center;
+    font-size: 1.2rem;
+    margin-top: 10px;
+    line-height: 1.6rem;
+    margin-bottom: 25px;
+}
+
+/* Row and card styling */
+.row {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+.card:hover .small {
+    color: #FFA500;
+    /* Turns text Green when hovering over the card */
+}
+.card {
+    border: 1px solid #dee2e6;
+    border-radius: 0.5rem;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+    height: auto;
+    width: 285px;
+    margin-bottom: 3rem;
+}
+/* For "1 users" in Free */
+.card:nth-child(1) .list-unstyled li:nth-child(1) {
+    color: #070707;
+    /* Darker text color */
+    font-weight: 900;
+    font-family: 'Poppins', sans-serif;
+    /* Optional: Make it bold for emphasis */
+}
+
+/* For "5 users" in Pro */
+.card:nth-child(2) .list-unstyled li:nth-child(1) {
+    color: #343a40;
+    /* Darker text color */
+    font-weight: bold;
+}
+
+/* For "Unlimited users" in Enterprise */
+.card:nth-child(3) .list-unstyled li:nth-child(1) {
+    color: #343a40;
+    /* Darker text color */
+    font-weight: bold;
+}
+
+/* For "Unlimited linked domains" in Enterprise */
+.card:nth-child(3) .list-unstyled li:nth-child(7) {
+    color: #343a40;
+    /* Darker text color */
+    font-weight: bold;
+}
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card-body {
+    padding: 30px;
+}
+
+/* Pricing header styles */
+.card-body .small {
+    text-transform: uppercase;
+    color: #1c1e1f;
+    font-weight: 800;
+    font-family: 'Poppins' sans-serif;
+}
+
+.card-body .display-4 {
+    color: #000000;
+    font-weight: bold;
+    margin-bottom: 10px;
+    font-size: 3rem;
+}
+
+.card-body .text-muted {
+    font-size: 0.9rem;
+    color: #6c757d;
+}
+
+/* List styling */
+.list-unstyled {
+    margin: 20px 0;
+    padding: 0;
+}
+
+.list-unstyled li {
+    font-size: 0.9rem;
+    color: #000000;
+    margin-bottom: 10px;
+    font-family: 'Poppins',sans-serif;
+    font-weight: 200;
+}
+
+.list-unstyled li i {
+    color: #007bff;
+    margin-right: 5px;
+}
+
+.list-unstyled li.text-muted i {
+    color: red;
+}
+
+/* Button styling */
+.btn {
+    font-size: 1rem;
+    border-radius: 0.5rem;
+    font-weight: bold;
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+    padding: 5px 55px;
+    text-decoration: none;
+}
+
+.btn-outline-primary {
+    color: #007bff;
+    border: 2px solid #007bff;
+    background-color: transparent;
+}
+
+.btn-outline-primary:hover {
+    color: #ffffff;
+    background-color: #007bff;
+}
+
+.btn-primary {
+    color: #ffffff;
+    background-color: #007bff;
+    border: 2px solid #007bff;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    p.lead {
+        font-size: 0.9rem;
+    }
+
+    .row {
+        flex-wrap: wrap;
+    }
+
+    .card {
+        margin-bottom: 20px;
+    }
+
+    .btn {
+        font-size: 0.9rem;
+    }
+}
+.d-grid {
+    display: flex;
+    /* Change to flex for more control */
+    justify-content: center;
+    /* Center horizontally */
+    align-items: center;
+    /* Center vertically if needed */
+    padding-top: 10px;
+}
+.change{
+    color: #000000;
+    font-weight: bold;
+}
+@media (max-width: 767px) {
+    .hamburger {
+        display: flex;
+    }
+}
